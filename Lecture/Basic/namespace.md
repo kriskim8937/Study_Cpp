@@ -8,10 +8,16 @@
 #### namespcae에 있는 요소에 접근하는 3가지 방법
 - 1. **한정된 이름(qulified name)**을 사용하는 방법
   - Audio::init();
-- 2. Using 선언(declaration)을 사용한 접근
+- 2. **Using 선언(declaration)**을 사용한 접근
   - using Audio::init;
-- 3. Using 지시어(directive)을 사용한 접근
+  - init 함수는 Audio 이름 없이 사용 가능 
+- 3. **Using 지시어(directive)**을 사용한 접근
   - using namespace Audio; 
+  - Audio namespace의 모든 요소를 Audio 이름 없이 사용가능.
+  - 함수 안에 있으면 그 함수 안에서만 init을 쓸 수 있고, 함수 밖이면 그 밑에 있는 모든 함수들에서 사용가능
+- using 선언이나 지시어는 **함수 안 또는 밖**에 만들 수 있다.
+- global과 함수 안에 같은 함수가 다른 namespace로 정의되면 이름 충돌(ambiguos error) 발생, 1번 방법이 가장 안전하다. 
+  - ::init(); 하면 무조건 글로벌, 에러 안남 
 #### Java package와의 공통점과 차이점
 - 공통점
   - naming conflict를 막는다.
