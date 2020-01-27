@@ -22,6 +22,7 @@
 - 보통 .h에 함수 선언하고, 구현 파일 .cpp 에  #include해서 사용함 
 - 함수의 **선언부와 구현부를 모두 namespace로 묶어야 한다.**
 ``` Audio.cpp
+//Audio.cpp
 #include "Audio.h"
 #include <stdio.h>
 namespace Audio{
@@ -35,6 +36,7 @@ namespace Audio{
 }
 ```
 ```Audio.h
+//Audio.h
 namespace Audio
 {
     void init();
@@ -42,6 +44,7 @@ namespace Audio
 }
 ```
 ```main.cpp
+//main.cpp
 #include "Audio.h"
 int main()
 {
