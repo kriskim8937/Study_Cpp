@@ -18,6 +18,36 @@
 - using 선언이나 지시어는 **함수 안 또는 밖**에 만들 수 있다.
 - global과 함수 안에 같은 함수가 다른 namespace로 정의되면 이름 충돌(ambiguos error) 발생, 1번 방법이 가장 안전하다. 
   - ::init(); 하면 무조건 글로벌, 에러 안남 
+#### 함수를 선언 파일과 구현 파일로 분리할 때 
+- 보통 .h에 함수 선언하고, 구현 파일 .cpp 에  #include해서 사용함 
+- 함수의 **선언부와 구현부를 모두 namespace로 묶어야 한다.**
+``` Audio.cpp
+#include "Audio.h"
+#include <stdio.h>
+namespace Audio{
+    void init()
+    {
+        printf("Audio\n");        
+    }
+    void reset(){
+
+    }
+}
+```
+```Audio.h
+namespace Audio
+{
+    void init();
+    void reset();
+}
+```
+```main.cpp
+#include "Audio.h"
+int main()
+{
+    Audio::init();
+}
+```
 #### Java package와의 공통점과 차이점
 - 공통점
   - naming conflict를 막는다.
