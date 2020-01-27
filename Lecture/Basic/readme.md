@@ -15,8 +15,11 @@
   - 최신 문법 (C++17)의 지원 여부를 확인할 필요가 있음
 - 2. command prompt(termianl)에서 컴파일
   - g++ hello.cpp -std=c++1z -> a.exe 
+    - std=c++ c++ 17을 사용하기 위함
   - cl hello.cpp /std:c++lated /nologo /EHsc /Za ->hello.exe
-    - microsoft는 별도의 확장 문법을 사용하기 때문에, 이를 비활성화 시켜 줄 필요가 있음
+    - /EHsc c++ exception 보내지 말라는 옵션, /std: c++ lated c++17을 시용 하기 위한 옵션
+    - microsoft는 별도의 확장 문법을 사용하기 때문에, 이를 비활성화 시켜 줄 필요가 있음 /Za 옵션
+  - https://github.com/codenuri/common
 ## 과정 내용
  - C++ 기본 문법 (c++ 11/14/17 최신 문법 / modern c++)
  - 객체 지향 프로그래밍
