@@ -6,12 +6,12 @@
 - 프로그램의 **다양한 요소(함수, 구조체 등)을 연관된 요소끼리 묶어서 관리** 할 수 있다.
 - 기능별로 다른 이름 공간을 사용함으로써 **함수/구조체 등의 이름 충돌을 막을 수** 있다.
 #### namespcae에 있는 요소에 접근하는 3가지 방법
-- 1. **한정된 이름(qulified name)**을 사용하는 방법
+- 1 **한정된 이름(qulified name)**을 사용하는 방법
   - Audio::init();
-- 2. **Using 선언(declaration)**을 사용한 접근
+- 2 **Using 선언(declaration)**을 사용한 접근
   - using Audio::init;
   - init 함수는 Audio 이름 없이 사용 가능 
-- 3. **Using 지시어(directive)**을 사용한 접근
+- 3 **Using 지시어(directive)**을 사용한 접근
   - using namespace Audio; 
   - Audio namespace의 모든 요소를 Audio 이름 없이 사용가능.
   - 함수 안에 있으면 그 함수 안에서만 init을 쓸 수 있고, 함수 밖이면 그 밑에 있는 모든 함수들에서 사용가능
