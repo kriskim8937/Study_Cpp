@@ -16,6 +16,7 @@
 - 2. command prompt(termianl)에서 컴파일
   - g++ hello.cpp -std=c++1z -> a.exe 
   - cl hello.cpp /std:c++lated /nologo /EHsc /Za ->hello.exe
+    - microsoft는 별도의 확장 문법을 사용하기 때문에, 이를 비활성화 시켜 줄 필요가 있음
 ## 과정 내용
  - C++ 기본 문법 (c++ 11/14/17 최신 문법 / modern c++)
  - 객체 지향 프로그래밍
